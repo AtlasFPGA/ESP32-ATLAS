@@ -10,8 +10,11 @@ Señal JOYSTICK DB9 | En preparación ATARI-PADDLE-ATLAS  | 6
 Señal SD SPI | las señales QPI se usan en modo SPI| 4
 Señal PS2 TECLADO  | Protocolo PS2 | 2
 Señal PS2 RATÓN | Protocolo PSD | 2
-Señal Delta Sigma | sonido delta sigma_(12bits) o un pwm_(10bits)| 2
+Señal Sonido Estereo | sonido delta sigma_(12bits) o un pwm_(10bits)| 2
+Señal Transmisión y Recepcion | RX TX sin gestión de flujo| 2
 Señal EAR | Señal de entrada | 1
+
+Las Señales de RX y TX, estarán colocadas en el conector del SBC de 2x20 pines.
 
 Lo que hace un total de 25 pines GPIO, pines disponibles para aumentar el diseño, sí dado que el DB9 está en modo PULL UP, y podría ser ampliado el modelo mediante integrados I2C, en un máximo de 3 buses I2C, con un conector muy extendido el DB9.
 
