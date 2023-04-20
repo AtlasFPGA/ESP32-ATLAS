@@ -17,11 +17,11 @@ Lo que hace un total de 25 pines GPIO, pines disponibles para aumentar el diseñ
 
 ![ESP32-DOIT-DEVKIT-V1](https://github.com/AtlasFPGA/ESP32-ATLAS/blob/main/FOTOS/ESP32-DOIT-DEVKIT-V1-Board-Pinout-30-GPIOs-2.jpg)
 
-###Las características del Esp32:
+## Las características del Esp32:
 
 Los lenguajes de programación más usados para NodeMCU ESP32, son Arduino y MicroPython. Ambos son de código abierto y cuentan con herramientas de desarrollo gratuitas.
  
-###Especificaciones:
+## Especificaciones:
 
 • Placa: ESP32 DEVKIT V1 (Espressif)
 
@@ -93,7 +93,7 @@ Fuente de características y mapeado de pines del microcontrolador de Espressif 
 
 https://www.puntoflotante.net/NODEMCU-ESP32-DEVKIT-V1-STARTER-KIT.htm
 
-##En total ATLAS pone a dispocisión con el recolocador ESP32-ATLAS unas 25 señales, completando todas las señales que le puede brindar la I/O BOARD ATLAS: 
+## En total ATLAS pone a dispocisión con el recolocador ESP32-ATLAS unas 25 señales, completando todas las señales que le puede brindar la I/O BOARD ATLAS: 
 
 Si hubiera una linea a mayores disponible sería muy interesante que actuara automáticamente un CS_PADDLE sobre el ATARI-PADDLE-ATLAS.
 
