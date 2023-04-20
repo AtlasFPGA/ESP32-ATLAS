@@ -1,8 +1,9 @@
 # ESP32-ATLAS
-Diseño en desarrollo para el ESP32 DEV KIT V1 usado de forma básica con sus  25 señales, usando un VGA64.
-No podíamos dejar pasar la oportunidad de alojar el ESP32 en el interior de la I/O BOARD ATLAS, estando muchos años en el mercado, el ESP32 sigue siendo un producto puntero.
+   Diseño en desarrollo para el ESP32 DEV KIT V1 usado de forma básica con sus  25 señales, dispone de un VGA64.
+   
+   No podíamos dejar pasar la oportunidad de alojar el ESP32 en el interior de la I/O BOARD ATLAS, estando muchos años en el mercado, el ESP32 sigue siendo un producto puntero.
 
-Es importantísimo tener su Software en ATLAS, y cubre toda la placa con sus conectores disponibles.
+   Es importantísimo tener su Software en ATLAS, y cubre toda la placa con sus conectores disponibles.
 
 señales ATLAS| aclaración en ESP32 DEV KIT 1 | numero pines
 | :--- | ---: | :---:
@@ -15,9 +16,9 @@ Señal Sonido Estereo | sonido delta sigma_(12bits) o un pwm_(10bits)| 2
 Señal Transmisión y Recepcion | RX TX sin gestión de flujo| 2
 Señal EAR | Señal de entrada | 1
 
-Las Señales de RX y TX, estarán colocadas en el conector del SBC de 2x20 pines.
+   Las Señales de RX y TX, estarán colocadas en el conector del SBC de 2x20 pines.
 
-Lo que hace un total de 25 pines GPIO, pines disponibles para aumentar el diseño, sí dado que el DB9 está en modo PULL UP, y podría ser ampliado el modelo mediante integrados I2C, en un máximo de 3 buses I2C, con un conector muy extendido el DB9.
+   Lo que hace un total de 25 pines GPIO, pines disponibles para aumentar el diseño, sí dado que el DB9 está en modo PULL UP, y podría ser ampliado el modelo mediante integrados I2C, en un máximo de 3 buses I2C, con un conector muy extendido el DB9.
 
 ![ESP32-DOIT-DEVKIT-V1](https://github.com/AtlasFPGA/ESP32-ATLAS/blob/main/FOTOS/ESP32-DOIT-DEVKIT-V1-Board-Pinout-30-GPIOs-2.jpg)
 
@@ -93,13 +94,13 @@ QSPI Flash/SRAM, 4 MBytes
 
 - Número total de pines: 30
 
-Fuente de características y mapeado de pines del microcontrolador de Espressif ESP32.
+   Fuente de características y mapeado de pines del microcontrolador de Espressif ESP32.
 
 https://www.puntoflotante.net/NODEMCU-ESP32-DEVKIT-V1-STARTER-KIT.htm
 
-## En total ATLAS pone a dispocisión con el recolocador ESP32-ATLAS unas 25 señales, completando todas las señales que le puede brindar la I/O BOARD ATLAS: 
+##   En total ATLAS pone a dispocisión con el recolocador ESP32-ATLAS unas 25 señales, completando todas las señales que le puede brindar la I/O BOARD ATLAS: 
 
-Si hubiera una linea a mayores disponible sería muy interesante que actuara automáticamente un CS_PADDLE sobre el ATARI-PADDLE-ATLAS.
+Si   hubiera una linea a mayores disponible sería muy interesante que actuara automáticamente un CS_PADDLE sobre el ATARI-PADDLE-ATLAS.
 
 ---
 
