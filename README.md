@@ -10,8 +10,8 @@ señales ATLAS| aclaración en ESP32 DEV KIT 1 | numero pines
 Señal VGA64 | Casi todos los cores de ESP32 usan 64colores esquema 222+HS+VS | 6
 Señal JOYSTICK DB9 | En preparación ATARI-PADDLE-ATLAS  | 6
 Señal SD SPI | las señales QPI se usan en modo SPI| 4
-Señal PS2 TECLADO  | Protocolo PS2 | 2
-Señal PS2 RATÓN | Protocolo PSD | 2
+Señal PS2 TECLADO  | Protocolo PS/2 | 2
+Señal PS2 RATÓN | Protocolo PS/2 | 2
 Señal Sonido Estereo | sonido delta sigma_(12bits) o un pwm_(10bits)| 2
 Señal Transmisión y Recepcion | RX TX sin gestión de flujo| 2
 Señal EAR | Señal de entrada | 1
