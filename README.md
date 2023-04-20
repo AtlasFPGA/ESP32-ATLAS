@@ -1,7 +1,8 @@
 # ESP32-ATLAS
-Diseño en desarrollo para el ESP32 DEV KIT V1 usado de forma básica con sus  25 señales, como nota usando también un VGA64.
-No podíamos dejar pasar la oportunidad de alojar el ESP32 en el interior de la I/O board ATLAS, teniendo muchos años en el mercado sigue siendo un producto puntero.
-Es importantísimo tene su Software en Atlas, y prácticamente cubre toda la placa en los dispositivos disponibles.
+Diseño en desarrollo para el ESP32 DEV KIT V1 usado de forma básica con sus  25 señales, usando un VGA64.
+No podíamos dejar pasar la oportunidad de alojar el ESP32 en el interior de la I/O BOARD ATLAS, estando muchos años en el mercado, el ESP32 sigue siendo un producto puntero.
+
+Es importantísimo tener su Software en ATLAS, y cubre toda la placa con sus conectores disponibles.
 
 señales ATLAS| aclaración en ESP32 DEV KIT 1 | numero pines
 | :--- | ---: | :---:
