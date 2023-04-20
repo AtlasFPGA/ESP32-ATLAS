@@ -21,9 +21,13 @@ Señal EAR | Señal de entrada | 1
    Lo que hace un total de 25 pines GPIO, para aumentar el diseño, esta el DB9 con 6 pines en PULL UP (Consultar esquema ATLAS-MINI), permite ampliarse el modelo existente mediante integrados I2C, con un máximo de 3 buses I2C en el bus DB9.
    
    Consulta del esquema ATLAS MINI "La Roja" con licencia CERN OHL V2 STRICT:
+   
    https://github.com/AtlasFPGA/BASECARRIERBOARDATLAS
+   
    Consulta del esquema en easyeda:
+   
    https://oshwlab.com/subcritical/carrier_io_board_atlas_mini_copy
+   
 
 ![ESP32-DOIT-DEVKIT-V1](https://github.com/AtlasFPGA/ESP32-ATLAS/blob/main/FOTOS/ESP32-DOIT-DEVKIT-V1-Board-Pinout-30-GPIOs-2.jpg)
 
