@@ -18,7 +18,7 @@ Señal EAR | Señal de entrada | 1
 
    Las Señales de RX y TX, estarán colocadas en el conector del SBC de 2x20 pines.
 
-   Lo que hace un total de 25 pines GPIO, pines disponibles para aumentar el diseño, sí dado que el DB9 está en modo PULL UP, y podría ser ampliado el modelo mediante integrados I2C, en un máximo de 3 buses I2C, con un conector muy extendido el DB9.
+   Lo que hace un total de 25 pines GPIO, para aumentar el diseño, esta el DB9 con 6 pines en PULL UP (Consultar esquema ATLAS-MINI), permite ampliarse el modelo existente mediante integrados I2C, con un máximo de 3 buses I2C en el bus DB9.
 
 ![ESP32-DOIT-DEVKIT-V1](https://github.com/AtlasFPGA/ESP32-ATLAS/blob/main/FOTOS/ESP32-DOIT-DEVKIT-V1-Board-Pinout-30-GPIOs-2.jpg)
 
