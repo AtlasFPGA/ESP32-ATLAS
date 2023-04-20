@@ -13,12 +13,15 @@ Señal PS2 RATÓN | Protocolo PSD | 2
 Señal Delta Sigma | sonido delta sigma_(12bits) o un pwm_(10bits)| 2
 Señal EAR | Señal de entrada | 1
 
+Lo que hace un total de 25 pines GPIO, pines disponibles para aumentar el diseño, sí dado que el DB9 está en modo PULL UP, y podría ser ampliado el modelo mediante integrados I2C, en un máximo de 3 buses I2C, con un conector muy extendido el DB9.
+
 ![ESP32-DOIT-DEVKIT-V1](https://github.com/AtlasFPGA/ESP32-ATLAS/blob/main/FOTOS/ESP32-DOIT-DEVKIT-V1-Board-Pinout-30-GPIOs-2.jpg)
 
-Las características del Esp32:
+###Las características del Esp32:
+
 Los lenguajes de programación más usados para NodeMCU ESP32, son Arduino y MicroPython. Ambos son de código abierto y cuentan con herramientas de desarrollo gratuitas.
  
-Especificaciones:
+###Especificaciones:
 
 • Placa: ESP32 DEVKIT V1 (Espressif)
 
