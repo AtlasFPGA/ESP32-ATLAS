@@ -18,6 +18,26 @@ Señal EAR | Señal de entrada | 1
 
    En este diseño son ecesarias 27 señales, pero el ESP32 DEV KIT V1 dispone de 25 patillas/señales de las cuales 4 son sólo de entrada, ahí conectamos el mando de juegos.
 
+   Usamos un esquema de bitluni para el recolocador:
+   http://www.fabglib.org/conf_v_g_a.html
+
+señales ATLAS | Patillaje izquierda | patilaje derecha | señales ATLAS
+| :--- | ---: | ---: | :---: 
+NC| ENABLE | GPIO23| HSYNC
+JOY_UP| GPIO36 | GPIO22| RED[1]
+JOY_DOWN| GPIO39 | GPIO01 | JOY_P1
+JOY_RIGHT| GPIO34 | GPIO03 | JOY_P2
+JOY_LEFT| GPIO35 | GPIO21| RED[0]
+KB_DATA| GPIO32 | GPIO19 | GREEN[1]
+KB_CLK| GPIO33 | GPIO18 | GREEN[0]
+AUDIO_R| GPIO25 | GPIO05 | BLUE[1]
+MOUSE_CLK| GPIO26 |GPIO17 | SD_MOSI
+MOUSE_DATA| GPIO27 | GPIO16 | SD_MISO
+SD_CLK| GPIO14 | GPIO04 | BLUE[0]
+AUDIO_L| GPIO12 | GPIO02 | EAR
+SD_CS| GPIO13 | GPIO15 | VSYNC
+GND| GND | GND| GND
+VIN| VIN | +3V3| +3V3
    No hay lugar para Las Señales de RX y TX como GPIOS, se tendrá que acceder desde el USB.
 
    Lo que hace un total de 25 pines GPIO, para aumentar el diseño, esta el DB9 con 6 pines en PULL UP (Consultar esquema ATLAS-MINI), permite ampliarse el modelo existente mediante integrados I2C, con un máximo de 3 buses I2C en el bus DB9.
