@@ -20,9 +20,15 @@ Señal EAR | Señal de entrada | 1
 
    Usamos un esquema de bitluni para el recolocador:
    http://www.fabglib.org/conf_v_g_a.html
+   
+![PINEADO](https://github.com/AtlasFPGA/ESP32-ATLAS/blob/main/FOTOS/ESP32-DOIT-DEV-KIT-v1-pinout-mischianti.png)
+
+##   Nota importante fijarse en los 4 pines que sólo permiten señales de entrada corresponden al GPIO36, GPIO39, GPIO34, Y GPIO35.
+
+---
 
 señales ATLAS | Patillaje izquierda | patilaje derecha | señales ATLAS
-| :--- | ---: | ---: | :---: 
+| ---: | ---: | ---: | :---: 
 NC| ENABLE | GPIO23| HSYNC
 JOY_UP| GPIO36 | GPIO22| RED[1]
 JOY_DOWN| GPIO39 | GPIO01 | JOY_P1
@@ -38,6 +44,17 @@ AUDIO_L| GPIO12 | GPIO02 | EAR
 SD_CS| GPIO13 | GPIO15 | VSYNC
 GND| GND | GND| GND
 VIN| VIN | +3V3| +3V3
+
+---
+
+   Señales del ESP32 DEV KIT 1:
+
+![ESP32 DEV KIT 1](https://github.com/AtlasFPGA/ESP32-ATLAS/blob/main/ESP32-DOIT-DEV-KIT-v1-pinout-mischianti.png)
+
+---
+
+
+
    No hay lugar para Las Señales de RX y TX como GPIOS, se tendrá que acceder desde el USB.
 
    Lo que hace un total de 25 pines GPIO, para aumentar el diseño, esta el DB9 con 6 pines en PULL UP (Consultar esquema ATLAS-MINI), permite ampliarse el modelo existente mediante integrados I2C, con un máximo de 3 buses I2C en el bus DB9.
