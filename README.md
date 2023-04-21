@@ -47,10 +47,11 @@ VIN| VIN | +3V3| +3V3
 
 ---
 
-   Señales del ESP32 DEV KIT 1:
-
-![ESP32 DEV KIT 1](https://github.com/AtlasFPGA/ESP32-ATLAS/blob/main/ESP32-DOIT-DEV-KIT-v1-pinout-mischianti.png)
-
+   Esquema de referencia:
+   
+![Esquemático de referencia FABGL](https://github.com/AtlasFPGA/ESP32-ATLAS/blob/main/FOTOS/fabglcircuit.gif)
+   
+   
 ---
 
 
