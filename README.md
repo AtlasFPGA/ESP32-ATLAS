@@ -58,7 +58,7 @@ VIN| VIN | +3V3| +3V3
 
    No hay lugar para Las Señales de RX y TX como GPIOS, se tendrá que acceder desde el USB.
 
-   Lo que hace un total de 25 pines GPIO, para aumentar el diseño, esta el DB9 con 6 pines en PULL UP (Consultar esquema ATLAS-MINI), permite ampliarse el modelo existente mediante integrados I2C, con un máximo de 3 buses I2C en el bus DB9.
+   Lo que hace un total de 25 pines GPIO, para aumentar el diseño, esta el DB9 con 6 pines en PULL UP (Consultar esquema ATLAS-MINI), permite ampliarse el modelo existente mediante integrados I2C, con un buses de entrada salida en el bus DB9, tener en cuenta de las otras 4 señales, obligatoriamente tiene que ser señales de entrada.
    
    Consulta del esquema ATLAS MINI "La Roja" con licencia CERN OHL V2 STRICT:
    
