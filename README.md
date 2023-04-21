@@ -7,7 +7,7 @@
 
 señales ATLAS| aclaración en ESP32 DEV KIT 1 | numero pines
 | :--- | ---: | :---:
-Señal VGA64 | Casi todos los cores de ESP32 usan 64colores esquema 222+HS+VS | 6
+Señal VGA64 | Casi todos los cores de ESP32 usan 64colores esquema 222+HS+VS | 8
 Señal JOYSTICK DB9 | En preparación ATARI-PADDLE-ATLAS  | 6
 Señal SD SPI | las señales QPI se usan en modo SPI| 4
 Señal PS2 TECLADO  | Protocolo PS/2 | 2
@@ -16,7 +16,9 @@ Señal Sonido Estereo | sonido delta sigma_(12bits) o un pwm_(10bits)| 2
 Señal Transmisión y Recepcion | RX TX sin gestión de flujo| 2
 Señal EAR | Señal de entrada | 1
 
-   Las Señales de RX y TX, estarán colocadas en el conector del SBC de 2x20 pines.
+   En este diseño son ecesarias 27 señales, pero el ESP32 DEV KIT V1 dispone de 25 patillas/señales de las cuales 4 son sólo de entrada, ahí conectamos el mando de juegos.
+
+   No hay lugar para Las Señales de RX y TX como GPIOS, se tendrá que acceder desde el USB.
 
    Lo que hace un total de 25 pines GPIO, para aumentar el diseño, esta el DB9 con 6 pines en PULL UP (Consultar esquema ATLAS-MINI), permite ampliarse el modelo existente mediante integrados I2C, con un máximo de 3 buses I2C en el bus DB9.
    
