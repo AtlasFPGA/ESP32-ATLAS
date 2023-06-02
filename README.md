@@ -162,3 +162,7 @@ Si   hubiera una linea a mayores disponible sería muy interesante que actuara a
 ---
 
 ![ESP32-ATLAS-WITH-VGA64](https://github.com/AtlasFPGA/ESP32-ATLAS/blob/main/FOTOS/ESP32-ATLAS-WITH-VGA64.jpg)
+
+---
+
+![VERIFICACIÓN FUNCIONAMIENTO](https://github.com/AtlasFPGA/ESP32-ATLAS/blob/main/FOTOS/VGA64_IO_BOARD_ATLAS_ESP32_DEV_KIT_V1_P1000386.JPG)
