@@ -110,7 +110,7 @@ TMDS[7]|2+   | RED[1] | RED[1]
    https://oshwlab.com/subcritical/carrier_io_board_atlas_mini_copy
    
 
-![ESP32-DOIT-DEVKIT-V1](https://github.com/AtlasFPGA/ESP32-ATLAS/blob/main/FOTOS/ESP32-DOIT-DEVKIT-V1-Board-Pinout-30-GPIOs-2.jpg)
+![ESP32-DOIT-DEVKIT-V1](https://github.com/AtlasFPGA/ESP32-ATLAS/blob/main/FOTOS/ESP32-DevKitC-Dimensions.png)
 
 ## Las características del Esp32:
 
