@@ -11,10 +11,13 @@ Versión final sin amplificación de sonido:
 ---   
    
    
-# VIDEO DEL PROCESO DE DESARROLLO, Y MUESTRA DEL DAC VGA64 CON EL ESP32 DEV KIT V1 EN LA PRIMERA VERSIÓN DE ATLAS:
+# Vídeo del proceso de desarrollo del recolocador para ESP32 DEV KIT V1; así como mostrar el funcionamiento del VGA64 222+HS+VS de I/O Board ATLAS:
 
 [![Watch the video](https://img.youtube.com/vi/wdI3RePPbeQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=wdI3RePPbeQ)
    Es importantísimo tener su Software en ATLAS, y cubre toda la placa con sus conectores disponibles.
+   No hay lugar para Las Señales de RX y TX como GPIOS, se tendrá que acceder desde el USB.
+
+---
 
 señales ATLAS| aclaración en ESP32 DEV KIT 1 | numero pines
 | :--- | ---: | :---:
@@ -27,9 +30,9 @@ Señal Sonido Estereo | sonido delta sigma_(12bits) o un pwm_(10bits)| 2
 Señal Transmisión y Recepcion | RX TX sin gestión de flujo| 2
 Señal EAR | Señal de entrada | 1
 
-   En este diseño son ecesarias 27 señales, pero el ESP32 DEV KIT V1 dispone de 25 patillas/señales de las cuales 4 son sólo de entrada, ahí conectamos el mando de juegos.
+   En este diseño son Necesarias 27 señales, pero el ESP32 DEV KIT V1 dispone de 25 patillas/señales de las cuales 4 son sólo de entrada, ahí conectamos las direcciones del mando de juegos de norma ATARI en un bus DB9.
 
-   Usamos un esquema de bitluni para el recolocador:
+   Inicialmente antes de realizar el recolocador final, usamos un esquema de bitluni:
    http://www.fabglib.org/conf_v_g_a.html
    
 ![PINEADO](https://github.com/AtlasFPGA/ESP32-ATLAS/blob/main/FOTOS/ESP32-DOIT-DEV-KIT-v1-pinout-mischianti.png)
@@ -38,31 +41,9 @@ Señal EAR | Señal de entrada | 1
 
 ---
 
-señales ATLAS | Patillaje izquierda | patilaje derecha | señales ATLAS
-| ---: | ---: | ---: | :---: 
-NC| ENABLE | GPIO23| HSYNC
-JOY_UP| GPIO36 | GPIO22| RED[1]
-JOY_DOWN| GPIO39 | GPIO01 | JOY_P1
-JOY_RIGHT| GPIO34 | GPIO03 | JOY_P2
-JOY_LEFT| GPIO35 | GPIO21| RED[0]
-KB_DATA| GPIO32 | GPIO19 | GREEN[1]
-KB_CLK| GPIO33 | GPIO18 | GREEN[0]
-AUDIO_R| GPIO25 | GPIO05 | BLUE[1]
-MOUSE_CLK| GPIO26 |GPIO17 | SD_MOSI
-MOUSE_DATA| GPIO27 | GPIO16 | SD_MISO
-SD_CLK| GPIO14 | GPIO04 | BLUE[0]
-AUDIO_L| GPIO12 | GPIO02 | EAR
-SD_CS| GPIO13 | GPIO15 | VSYNC
-GND| GND | GND| GND
-VIN| VIN | +3V3| +3V3
-
----
-# ASIGNACIÓN ACTUAL BUSCANDO TENER I2C EN EL PUERTO DB9, ASÍ COMO SUS 4 DIRECCIONES DEL JOYSTICK EN PINES DE SÓLO ENTRADA:
-# ESTA VERSIÓN TIENE EN CUENTA LOS CONVERSORES DE DIGITAL A ANOLÓGICO DE 8BITS POR CANAL Y LOS COLOCA EN LA SALIDA DE AUDIO.
-
-los GPIO asociados a la salida de los dac de 8bit cada uno son, el GPIO25 y GPIO26.
-
-Esta tercera iteración será la configuración final para el recolocador. 
+# ASIGNACIÓN ACTUAL; buscando tener el I2C y los 2 DAC de 8bits de resolución en la salida de sonido:
+   los GPIO asociados a la salida de los dac de 8bit cada uno son, el GPIO25 y GPIO26.
+   Esta tercera iteración será la configuración final para el recolocador sin amplificación de la señal de audio. 
 
 señales ATLAS | Patillaje izquierda | patilaje derecha | señales ATLAS
 | ---: | ---: | ---: | :---: 
@@ -95,20 +76,14 @@ TMDS[5]|1+   | GREEN[1] | G[2]
 TMDS[6]|2-   | RED[0] | RED[0] 
 TMDS[7]|2+   | RED[1] | RED[1] 
 
+Nota: en modo DVI y anulando los pares diferenciales, una señal de baja frecuencia tendría que generar los datos para los 3 colores en digital, y un reloj, en total 4 señales de vídeo digital, no sabemos si esto puede ser posible.
+
 ---
 
-
-
-
-
-   Esquema de referencia:
-   
+   Esquema de referencia usado al inicio de las iteraciones:
 ![Esquemático de referencia FABGL](https://github.com/AtlasFPGA/ESP32-ATLAS/blob/main/FOTOS/fabglcircuit.gif)
-   
-   
+    
 ---
-
-   No hay lugar para Las Señales de RX y TX como GPIOS, se tendrá que acceder desde el USB.
 
    Lo que hace un total de 25 pines GPIO, para aumentar el diseño, esta el DB9 con 6 pines en PULL UP (Consultar esquema ATLAS-MINI), permite ampliarse el modelo existente mediante integrados I2C, con un buses de entrada salida en el bus DB9, tener en cuenta de las otras 4 señales, obligatoriamente tiene que ser señales de entrada.
    
@@ -120,6 +95,7 @@ TMDS[7]|2+   | RED[1] | RED[1]
    
    https://oshwlab.com/subcritical/carrier_io_board_atlas_mini_copy
    
+## Dimensiones:
 
 ![ESP32-DOIT-DEVKIT-V1](https://github.com/AtlasFPGA/ESP32-ATLAS/blob/main/FOTOS/ESP32-DevKitC-Dimensions.png)
 
