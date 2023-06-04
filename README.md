@@ -49,6 +49,8 @@ VIN| VIN | +3V3| +3V3
 # ASIGNACIÓN ACTUAL BUSCANDO TENER I2C EN EL PUERTO DB9, ASÍ COMO SUS 4 DIRECCIONES DEL JOYSTICK EN PINES DE SÓLO ENTRADA:
 # ESTA VERSIÓN TIENE EN CUENTA LOS CONVERSORES DE DIGITAL A ANOLÓGICO DE 8BITS POR CANAL Y LOS COLOCA EN LA SALIDA DE AUDIO.
 
+los GPIO asociados a la salida de los dac de 8bit cada uno son, el GPIO25 y GPIO26.
+
 Esta tercera iteración será la configuración final para el recolocador. 
 
 señales ATLAS | Patillaje izquierda | patilaje derecha | señales ATLAS
