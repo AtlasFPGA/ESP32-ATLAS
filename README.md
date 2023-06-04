@@ -72,6 +72,23 @@ GND| GND | GND| GND
 +5V| VIN | +3V3| +3V3
 
 ---
+# TABLA EQUIVALENCIAS SALIDA CONECTOR DE VÍDEO DIGITAL
+Nomenclatura DVI | Pares diferenciales | VGA64 | SCART128
+| ---: | ---: | ---: | :---: 
+TMDS[0]|CLK- | HS | CSYNC
+TMDS[1]|CLK+ | VS | G[0]
+TMDS[2]|0-   | BLUE[0] | BLUE[0]
+TMDS[3]|0+   | BLUE[1] | BLUE[1]
+TMDS[4]|1-   | GREEN[0] | G[1]
+TMDS[5]|1+   | GREEN[1] | G[2]
+TMDS[6]|2-   | RED[0] | RED[0] 
+TMDS[7]|2+   | RED[1] | RED[1] 
+
+---
+
+
+
+
 
    Esquema de referencia:
    
