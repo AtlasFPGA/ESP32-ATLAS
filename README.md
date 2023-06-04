@@ -1,7 +1,7 @@
 # ESP32-ATLAS
    Diseño en desarrollo para el ESP32 DEV KIT V1 usado de forma básica con sus  25 señales, dispone de un VGA64.
-   
    No podíamos dejar pasar la oportunidad de alojar el ESP32 en el interior de la I/O BOARD ATLAS, estando muchos años en el mercado, el ESP32 sigue siendo un producto puntero.
+   Es importantísimo tener su Software en ATLAS, y cubre toda la placa con sus conectores disponibles.
    
 ---   
 
@@ -17,9 +17,7 @@
 # Vídeo del proceso de desarrollo del recolocador para ESP32 DEV KIT V1; así como mostrar el funcionamiento del VGA64 222+HS+VS de I/O Board ATLAS:
 
 [![Ver vídeo primera iteracion bitluni](https://img.youtube.com/vi/wdI3RePPbeQ/0.jpg)](https://www.youtube.com/watch?v=wdI3RePPbeQ)
-
-
-   Es importantísimo tener su Software en ATLAS, y cubre toda la placa con sus conectores disponibles.
+  
    No hay lugar para Las Señales de RX y TX como GPIOS, se tendrá que acceder desde el USB.
 
 ---
@@ -31,14 +29,16 @@ Señal JOYSTICK DB9 | En preparación ATARI-PADDLE-ATLAS  | 6
 Señal SD SPI | las señales QPI se usan en modo SPI| 4
 Señal PS2 TECLADO  | Protocolo PS/2 | 2
 Señal PS2 RATÓN | Protocolo PS/2 | 2
-Señal Sonido Estereo | sonido delta sigma_(12bits) o un pwm_(10bits)| 2
+Señal Sonido Estereo | sonido delta sigma_(12bits) o un pwm_(10bits), DAC_ESP32(8bits)| 2
 Señal Transmisión y Recepcion | RX TX sin gestión de flujo| 2
 Señal EAR | Señal de entrada | 1
 
-   En este diseño son Necesarias 27 señales, pero el ESP32 DEV KIT V1 dispone de 25 patillas/señales de las cuales 4 son sólo de entrada, ahí conectamos las direcciones del mando de juegos de norma ATARI en un bus DB9.
+   En este diseño son Necesarias 27 señales, pero el ESP32 DEV KIT V1 dispone de 25 patillas/señales de las cuales 4 son de entrada, ahí conectamos las direcciones del mando de juegos de norma ATARI en el bus DB9.
 
-   Inicialmente antes de realizar el recolocador final, usamos un esquema de bitluni:
+   Inicialmente antes de realizar el recolocador final,hemos usado el esquema de bitluni:
    http://www.fabglib.org/conf_v_g_a.html
+   Con la siguiente disposición de pines para la primera iteración de pines:
+   VGAController.begin(GPIO_NUM_22, GPIO_NUM_21, GPIO_NUM_19, GPIO_NUM_18, GPIO_NUM_5, GPIO_NUM_4, GPIO_NUM_23, GPIO_NUM_15);
    
 ![PINEADO](https://github.com/AtlasFPGA/ESP32-ATLAS/blob/main/FOTOS/ESP32-DOIT-DEV-KIT-v1-pinout-mischianti.png)
 
@@ -46,9 +46,9 @@ Señal EAR | Señal de entrada | 1
 
 ---
 
-# ASIGNACIÓN ACTUAL; buscando tener el I2C y los 2 DAC de 8bits de resolución en la salida de sonido:
+# ASIGNACIÓN ACTUAL; buscando tener el I2C con pull up en el DB9 y los 2 DAC de 8bits de resolución en la salida de sonido:
    los GPIO asociados a la salida de los dac de 8bit cada uno son, el GPIO25 y GPIO26.
-   Esta tercera iteración será la configuración final para el recolocador sin amplificación de la señal de audio. 
+   Esta es tercera iteración en su configuración final para el recolocador, a nivel lógico, sin amplificación de la señal de audio. 
 
 señales ATLAS | Patillaje izquierda | patilaje derecha | señales ATLAS
 | ---: | ---: | ---: | :---: 
@@ -81,7 +81,7 @@ TMDS[5]|1+   | GREEN[1] | G[2]
 TMDS[6]|2-   | RED[0] | RED[0] 
 TMDS[7]|2+   | RED[1] | RED[1] 
 
-Nota: en modo DVI y anulando los pares diferenciales, una señal de baja resolución tendría que generar los datos para los 3 colores en digital, y un reloj, en total 4 señales de vídeo digital, no sabemos si esto puede ser posible.
+Nota: en modo DVI y anulando los pares diferenciales negativos es decir a 0V, una señal de baja resolución tendría que generar los datos para los 3 colores en digital, y un reloj constate y 5 veces más veloz que el reloj de pixel asociado a su misma resolucion en analógico, en total 4 señales de vídeo digital, no sabemos si estas señales DVI pueden ser generadas.
 
 ---
 
