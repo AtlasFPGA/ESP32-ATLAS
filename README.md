@@ -6,6 +6,7 @@
 ---   
 
 Versión final sin amplificación de sonido:
+
 [![Ver vídeo diseño recolocador](https://img.youtube.com/vi/FslLuDT2TB8/maxresdefault.jpg)](https://www.youtube.com/watch?v=FslLuDT2TB8)
 
 ---   
