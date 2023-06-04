@@ -1,0 +1,1 @@
+Aquí se aloja el proyecto de referencia para la ESP32 DEV KIT V1, es un diseño base sin integrados.
