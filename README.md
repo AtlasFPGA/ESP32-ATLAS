@@ -3,6 +3,14 @@
    
    No podíamos dejar pasar la oportunidad de alojar el ESP32 en el interior de la I/O BOARD ATLAS, estando muchos años en el mercado, el ESP32 sigue siendo un producto puntero.
    
+---   
+
+Versión final sin amplificación de sonido:
+![BERSIÓN FINAL PLACA](https://github.com/AtlasFPGA/ESP32-ATLAS/blob/main/FOTOS/Recolocador_ESP32-Dev-kit-v1-0010.png)
+
+---   
+   
+   
 # VIDEO DEL PROCESO DE DESARROLLO, Y MUESTRA DEL DAC VGA64 CON EL ESP32 DEV KIT V1 EN LA PRIMERA VERSIÓN DE ATLAS:
 
 [![Watch the video](https://img.youtube.com/vi/wdI3RePPbeQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=wdI3RePPbeQ)
