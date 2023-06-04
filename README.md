@@ -2,7 +2,10 @@
    Diseño en desarrollo para el ESP32 DEV KIT V1 usado de forma básica con sus  25 señales, dispone de un VGA64.
    
    No podíamos dejar pasar la oportunidad de alojar el ESP32 en el interior de la I/O BOARD ATLAS, estando muchos años en el mercado, el ESP32 sigue siendo un producto puntero.
+   
+# VIDEO DEL PROCESO DE DESARROLLO, Y MUESTRA DEL DAC VGA64 CON EL ESP32 DEV KIT V1 EN LA PRIMERA VERSIÓN DE ATLAS:
 
+[![Watch the video](https://img.youtube.com/vi/wdI3RePPbeQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=wdI3RePPbeQ)
    Es importantísimo tener su Software en ATLAS, y cubre toda la placa con sus conectores disponibles.
 
 señales ATLAS| aclaración en ESP32 DEV KIT 1 | numero pines
