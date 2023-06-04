@@ -16,6 +16,8 @@
    
 # Vídeo del proceso de desarrollo del recolocador para ESP32 DEV KIT V1; así como mostrar el funcionamiento del VGA64 222+HS+VS de I/O Board ATLAS:
 
+[![Ver vídeo primera iteracion bitluni](https://img.youtube.com/vi/wdI3RePPbeQ/0.jpg)](https://www.youtube.com/watch?v=wdI3RePPbeQ)
+
 
    Es importantísimo tener su Software en ATLAS, y cubre toda la placa con sus conectores disponibles.
    No hay lugar para Las Señales de RX y TX como GPIOS, se tendrá que acceder desde el USB.
