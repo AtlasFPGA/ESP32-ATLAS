@@ -1,0 +1,1 @@
+Proyecto KICAD para la placa ESP32 DEV KIT V1, sin amplificador de sonido.
