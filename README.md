@@ -70,16 +70,18 @@ GND| GND | GND| GND
 
 ---
 # TABLA EQUIVALENCIAS SALIDA CONECTOR DE VÍDEO DIGITAL
-Nomenclatura DVI | Pares diferenciales | VGA64 | SCART128
-| ---: | ---: | ---: | :---: 
-TMDS[0]|CLK- | HS | CSYNC
-TMDS[1]|CLK+ | VS | G[0]
-TMDS[2]|0-   | BLUE[0] | BLUE[0]
-TMDS[3]|0+   | BLUE[1] | BLUE[1]
-TMDS[4]|1-   | GREEN[0] | G[1]
-TMDS[5]|1+   | GREEN[1] | G[2]
-TMDS[6]|2-   | RED[0] | RED[0] 
-TMDS[7]|2+   | RED[1] | RED[1] 
+Nomenclatura DVI | Pares diferenciales | VGA64 | SCART128 | ZX-SCART
+| ---: | ---: | ---: | ---: |:---: 
+TMDS[0]|CLK- | HS | CSYNC | CSYNC
+TMDS[1]|CLK+ | VS | G[0]  | BRIGHT
+TMDS[2]|0-   | BLUE[0] | BLUE[0] | POR DETERMINAR ¿I2S?
+TMDS[3]|0+   | BLUE[1] | BLUE[1] | B
+TMDS[4]|1-   | GREEN[0] | G[1] | POR DETERMINAR ¿I2S?
+TMDS[5]|1+   | GREEN[1] | G[2] | G
+TMDS[6]|2-   | RED[0] | RED[0] | POR DETERMINAR ¿I2S?
+TMDS[7]|2+   | RED[1] | RED[1] | R
+
+Las señales por determinar del módulo ZX-SCART llevan al menos en serie una resistencia de 270 ohm, pero al ser 3 señales se puede luchar icorporar al DAC de 15 colores un I2S.
 
 Nota: en modo DVI y anulando los pares diferenciales negativos es decir a 0V, una señal de baja resolución tendría que generar los datos para los 3 colores en digital, y un reloj constate y 5 veces más veloz que el reloj de pixel asociado a su misma resolucion en analógico, en total 4 señales de vídeo digital, no sabemos si estas señales DVI pueden ser generadas.
 
