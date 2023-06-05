@@ -1,0 +1,1 @@
+Version final del la placa recolocadora para ESP32 DEV KIT V1, en la placa I/O BOARD ATLAS.
