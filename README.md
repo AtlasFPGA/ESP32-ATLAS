@@ -1,11 +1,11 @@
 # ESP32-ATLAS
-   Diseño en desarrollo para el ESP32 DEV KIT V1 usado de forma básica con sus  25 señales, dispone de un VGA64.
-   No podíamos dejar pasar la oportunidad de alojar el ESP32 en el interior de la I/O BOARD ATLAS, estando muchos años en el mercado, el ESP32 sigue siendo un producto puntero.
-   Es importantísimo tener su Software en ATLAS, y cubre toda la placa con sus conectores disponibles.
+   Diseño en desarrollo para el ESP32 DEV KIT V1 usado de forma básica con sus  25 señales,se necesita disponer de un VGA64.
+   No podíamos dejar pasar la oportunidad de alojar el ESP32 en el interior de la I/O BOARD ATLAS,este microcontroladro lleva muchos años en el mercado,tant es así que el ESP32 sigue siendo un producto puntero.
+   Es importantísimo tener su Software en ATLAS, y con la tercera iteración de correspondencia de pines cubre toda la placa I/O BOARD ATLAS.
    
 ---   
 
-#Versión final sin amplificación de sonido:
+# Versión final sin amplificación de sonido:
 
 
 [![Ver vídeo diseño recolocador](https://img.youtube.com/vi/FslLuDT2TB8/0.jpg)](https://www.youtube.com/watch?v=FslLuDT2TB8)
@@ -14,12 +14,10 @@
 ---   
  
    
-# Vídeo del proceso de desarrollo del recolocador para ESP32 DEV KIT V1; así como mostrar el funcionamiento del VGA64 222+HS+VS de I/O Board ATLAS:
+# Vídeo del proceso de desarrollo del recolocador para ESP32 DEV KIT V1; así como mostrar el funcionamiento del VGA64 222+HS+VS de la placa I/O Board ATLAS:
 
 [![Ver vídeo primera iteracion bitluni](https://img.youtube.com/vi/wdI3RePPbeQ/0.jpg)](https://www.youtube.com/watch?v=wdI3RePPbeQ)
   
-   No hay lugar para Las Señales de RX y TX como GPIOS, se tendrá que acceder desde el USB.
-
 ---
 
 señales ATLAS| aclaración en ESP32 DEV KIT 1 | numero pines
@@ -33,22 +31,26 @@ Señal Sonido Estereo | sonido delta sigma_(12bits) o un pwm_(10bits), DAC_ESP32
 Señal Transmisión y Recepcion | RX TX sin gestión de flujo| 2
 Señal EAR | Señal de entrada | 1
 
+   No hay lugar para Las Señales de RX y TX como GPIOS, se tendrá que acceder desde el USB.
    En este diseño son Necesarias 27 señales, pero el ESP32 DEV KIT V1 dispone de 25 patillas/señales de las cuales 4 son de entrada, ahí conectamos las direcciones del mando de juegos de norma ATARI en el bus DB9.
 
    Inicialmente antes de realizar el recolocador final,hemos usado el esquema de bitluni:
+   
    http://www.fabglib.org/conf_v_g_a.html
+   
    Con la siguiente disposición de pines para la primera iteración de pines:
+   
    VGAController.begin(GPIO_NUM_22, GPIO_NUM_21, GPIO_NUM_19, GPIO_NUM_18, GPIO_NUM_5, GPIO_NUM_4, GPIO_NUM_23, GPIO_NUM_15);
    
 ![PINEADO](https://github.com/AtlasFPGA/ESP32-ATLAS/blob/main/FOTOS/ESP32-DOIT-DEV-KIT-v1-pinout-mischianti.png)
 
-##   Nota importante fijarse en los 4 pines que sólo permiten señales de entrada corresponden al GPIO36, GPIO39, GPIO34, Y GPIO35.
+##   Nota importante fijarse en los 4 pines que sólo permiten señales de entrada corresponden a los GPIO36, GPIO39, GPIO34, y GPIO35.
 
 ---
 
 # ASIGNACIÓN ACTUAL; buscando tener el I2C con pull up en el DB9 y los 2 DAC de 8bits de resolución en la salida de sonido:
    los GPIO asociados a la salida de los dac de 8bit cada uno son, el GPIO25 y GPIO26.
-   Esta es tercera iteración en su configuración final para el recolocador, a nivel lógico, sin amplificación de la señal de audio. 
+   Esta es tercera iteración en su configuración final para el recolocador, a nivel lógico, sin amplificación de la señal de audio, para habilitar el puerto de audio con tensiones, es necesario cortar 2 pad stereo para que no llegue la señal a la I/O BOARD ATLAS, y estañar los pads que llevan las señales ESP_AUDIO_8BIT, al conector con tensión 3v3 y GND.
 
 señales ATLAS | Patillaje izquierda | patilaje derecha | señales ATLAS
 | ---: | ---: | ---: | :---: 
@@ -62,8 +64,8 @@ TMDS_2_N| GPIO33 | GPIO18 | T13_SD_CLK
 R11_RIGHT| GPIO25 | GPIO05 | R12_SD_CS
 T12_LEFT| GPIO26 |GPIO17 | TMDS_O_P
 TMDS_1_P| GPIO27 | GPIO16 | TMDSC_N
-K2_KDAT| GPIO14 | GPIO04 | TMDS_1_N
-L2_KCLK| GPIO12 | GPIO02 | EAR
+ATLAS Mini -> L2_KCLK,Morada -> K2_KDAT| GPIO14 | GPIO04 | TMDS_1_N
+ATLAS Mini -> K2_KDAT,Morada -> L2_KCLK| GPIO12 | GPIO02 | EAR
 TMDS_0_N| GPIO13 | GPIO15 | TMDSC_P
 GND| GND | GND| GND
 +5V| VIN | +3V3| +3V3
