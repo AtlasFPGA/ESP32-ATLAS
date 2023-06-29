@@ -14,9 +14,9 @@ VGAController.begin(RED_1, RED_0 , GREEN_1, GREEN_0, BLUE_1, BLUE_0, H_SYNC, V_S
 
 Inicialización ESP32 en ATLAS con el recolocador creado:
 
-'''
+´´´
 ## VGAController.begin(GPIO_NUM_32, GPIO_NUM_33, GPIO_NUM_27, GPIO_NUM_4, GPIO_NUM_17, GPIO_NUM_13, GPIO_NUM_16, GPIO_NUM_15);
-'''
+´´´
 
 
 
