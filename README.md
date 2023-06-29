@@ -3,7 +3,17 @@
    No podíamos dejar pasar la oportunidad de alojar el ESP32 en el interior de la I/O BOARD ATLAS,este microcontroladro lleva muchos años en el mercado,tant es así que el ESP32 sigue siendo un producto puntero.
    Es importantísimo tener su Software en ATLAS, y con la tercera iteración de correspondencia de pines cubre toda la placa I/O BOARD ATLAS.
 
+La inicialización de FABGL con su configuración en la mayoría de las placas es la siguiente.
+inicialización VGA FABGL:
+VGAController.begin(GPIO_NUM_22, GPIO_NUM_21, GPIO_NUM_19, GPIO_NUM_18, GPIO_NUM_5, GPIO_NUM_4, GPIO_NUM_23, GPIO_NUM_15);
 
+Leyendo el quema vemos que significado tiene de señales con sus nombres lógicos de los bits de color así como la frecuencia horizontal y vertical.
+VGAController.begin(RED_1, RED_0 , GREEN_1, GREEN_0, BLUE_1, BLUE_0, H_SYNC, V_SYNC)
+
+Inicialización ESP32 en ATLAS con el recolocador creado:
+VGAController.begin(GPIO_NUM_32, GPIO_NUM_33, GPIO_NUM_27, GPIO_NUM_4, GPIO_NUM_17, GPIO_NUM_13, GPIO_NUM_16, GPIO_NUM_15);
+
+El recolocador de ATLAS tiene una colocación diferente.
 ---
 
 Colocación del ESP32 en la placa I/O Board ATLAS Morada:
