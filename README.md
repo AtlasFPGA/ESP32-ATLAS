@@ -2,6 +2,31 @@
    Diseño en desarrollo para el ESP32 DEV KIT V1 usado de forma básica con sus  25 señales,se necesita disponer de un VGA64.
    No podíamos dejar pasar la oportunidad de alojar el ESP32 en el interior de la I/O BOARD ATLAS,este microcontroladro lleva muchos años en el mercado,tant es así que el ESP32 sigue siendo un producto puntero.
    Es importantísimo tener su Software en ATLAS, y con la tercera iteración de correspondencia de pines cubre toda la placa I/O BOARD ATLAS.
+
+
+---
+
+Colocación del ESP32 en la placa I/O Board ATLAS Morada:
+![Colocación del ESP32 en la placa I/O Board ATLAS Morada](https://github.com/AtlasFPGA/ESP32-ATLAS/blob/main/FOTOS_PLACA_REALES/Visi%C3%B3n%20de%20ESP32%20con%20modelo%20prototipo%20Morado%20P1050220.JPG)
+
+---
+
+Placa "La Roja" vista con el recolocador ESP32 desde el bus del sbc:
+![Placa "La Roja" vista con el recolocador ESP32 desde el bus del sbc](https://github.com/AtlasFPGA/ESP32-ATLAS/blob/main/FOTOS_PLACA_REALES/Visi%C3%B3n%20de%20la%20placa%20con%20la%20roja%20B%20P1050235.JPG)
+
+---
+
+Ensamblado ESP32 visto desde los puertos ps2 y db9 norma atari:
+![Ensamblado ESP32 visto desde los puertos ps2 y db9 norma atari](https://github.com/AtlasFPGA/ESP32-ATLAS/blob/main/FOTOS_PLACA_REALES/Visi%C3%B3n%20de%20la%20placa%20con%20la%20roja%20P1050232.JPG)
+
+---
+
+Visión de la placa recolocadora ESP32 superior:
+![Visión de la placa recolocadora superior](https://github.com/AtlasFPGA/ESP32-ATLAS/blob/main/FOTOS_PLACA_REALES/Visi%C3%B3n%20de%20la%20placa%20recolocadora%20superior%20P1050208.JPG)
+
+---
+Visión de la placa recolocadora ESP32 infernior:
+![](https://github.com/AtlasFPGA/ESP32-ATLAS/blob/main/FOTOS_PLACA_REALES/Visi%C3%B3n%20de%20la%20placa%20inferior%20P1050211.JPG)
    
 ---   
 
