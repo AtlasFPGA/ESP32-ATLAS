@@ -1,0 +1,1 @@
+Se agregan las fotos de como queda la placa ESP32 para I/O Board ATLAS, en su versión MINI-> La Roja,  y el último prototipo "La Morada" y anterniores modelos como el AKA neptune y la V002 así como la V002 con EAR.
