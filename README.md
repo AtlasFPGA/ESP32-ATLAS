@@ -5,13 +5,16 @@
 
 La inicialización de FABGL con su configuración en la mayoría de las placas es la siguiente.
 inicialización VGA FABGL:
+
 VGAController.begin(GPIO_NUM_22, GPIO_NUM_21, GPIO_NUM_19, GPIO_NUM_18, GPIO_NUM_5, GPIO_NUM_4, GPIO_NUM_23, GPIO_NUM_15);
 
 Leyendo el quema vemos que significado tiene de señales con sus nombres lógicos de los bits de color así como la frecuencia horizontal y vertical.
+
 VGAController.begin(RED_1, RED_0 , GREEN_1, GREEN_0, BLUE_1, BLUE_0, H_SYNC, V_SYNC)
 
 Inicialización ESP32 en ATLAS con el recolocador creado:
-VGAController.begin(GPIO_NUM_32, GPIO_NUM_33, GPIO_NUM_27, GPIO_NUM_4, GPIO_NUM_17, GPIO_NUM_13, GPIO_NUM_16, GPIO_NUM_15);
+
+## VGAController.begin(GPIO_NUM_32, GPIO_NUM_33, GPIO_NUM_27, GPIO_NUM_4, GPIO_NUM_17, GPIO_NUM_13, GPIO_NUM_16, GPIO_NUM_15);
 
 El recolocador de ATLAS tiene una colocación diferente.
 ---
