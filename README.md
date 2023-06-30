@@ -11,7 +11,7 @@ inicialización VGA FABGL:
 
 ## Correcto funcionamiento recolocador ESP32:
 
-[![Correcto funcionamiento del recolocador ESP32]
+![Correcto funcionamiento del recolocador ESP32
 (https://img.youtube.com/vi/WPQtUhWn7BE/maxresdefault.jpg)](https://youtu.be/WPQtUhWn7BE)
 
 ---
