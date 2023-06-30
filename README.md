@@ -2,9 +2,20 @@
    Diseño en desarrollo para el ESP32 DEV KIT V1 usado de forma básica con sus  25 señales,se necesita disponer de un VGA64.
    No podíamos dejar pasar la oportunidad de alojar el ESP32 en el interior de la I/O BOARD ATLAS,este microcontroladro lleva muchos años en el mercado,tant es así que el ESP32 sigue siendo un producto puntero.
    Es importantísimo tener su Software en ATLAS, y con la tercera iteración de correspondencia de pines cubre toda la placa I/O BOARD ATLAS.
-
-La inicialización de FABGL con su configuración en la mayoría de las placas es la siguiente.
+   La inicialización de FABGL con su configuración en la mayoría de las placas es la siguiente.
 inicialización VGA FABGL:
+
+   Vídeo que muestra, el correcto funcionamiento del recolocador que nos permitirá jugar con audio amplificado, i2s así como i2c en el futuro.
+
+---
+
+## Correcto funcionamiento recolocador ESP32:
+
+[![Correcto funcionamiento del recolocador ESP32]
+(https://img.youtube.com/vi/WPQtUhWn7BE/maxresdefault.jpg)](https://youtu.be/WPQtUhWn7BE)
+
+---
+
 
 VGAController.begin(GPIO_NUM_22, GPIO_NUM_21, GPIO_NUM_19, GPIO_NUM_18, GPIO_NUM_5, GPIO_NUM_4, GPIO_NUM_23, GPIO_NUM_15);
 
